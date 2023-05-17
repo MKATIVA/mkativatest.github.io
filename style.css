@@ -131,6 +131,7 @@ section .title::after{ /*--Tópicos das Programações --*/
     padding: 15px 0;
     background: var(--crimson);  
 }
+
 .navbar .max-width{
     display: flex;
     align-items: center;
@@ -161,11 +162,13 @@ section .title::after{ /*--Tópicos das Programações --*/
 }
 
 .navbar.sticky .logo a span{
-    color: #fff;
+    color: var(--Amarelo-Claro);
 }
 .navbar .menu li{
     list-style: none;
     display: inline-block;
+    margin: 0 20px;
+    
 }
 .navbar .menu li a{
     display: block;
@@ -176,7 +179,8 @@ section .title::after{ /*--Tópicos das Programações --*/
     transition: color 0.3s ease;
 }
 .navbar .menu li a:hover{
-    color: var(--Amarelo-Claro);
+    color: var(--Amarelo-Claro);    
+    
 }
 .navbar.sticky .menu li a:hover{
     color: #fff;
@@ -184,38 +188,41 @@ section .title::after{ /*--Tópicos das Programações --*/
 
 /* menu btn styling */
 .menu-btn{
+    display: block;    
     color: #fff;
     font-size: 23px;
     cursor: pointer;
     display: none;
+    position: relative;    
 }
 
-.botão button{
-    width: 120px;
-    height: 35px;
-    background-color: var(--crimsonClaro);
-    border: 0;
-    border-radius: 6px;
-    color: var(--branco);
-    
+.menu button{
+    background: var(--crimsonClaro);
+    color: #fff;
+    font-size: 18px;
+    padding: 12px 36px;        
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;    
 }
 
-@keyframes anima{
-    0% {
+@keyframes botao{
+    0%{
         transform: scale(1);
     }
-    100% {
+    100%{
         transform: scale(1.05);
     }
 }
 
-.botão:hover button{
-    animation-name: anima;
-    animation-duration: 0.5s;
+.menu button:hover{
+    background-color: var(--crimson-meioEscuro);
+    animation-name: botao;
+    animation-duration: .5s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
-    background-color: var(--crimson-meioEscuro);
-    transition: .5s;    
+    color: var(--branco);
+    transition: .2s;
 }
 
 .scroll-up-btn{
@@ -290,16 +297,16 @@ section .title::after{ /*--Tópicos das Programações --*/
     font-weight: 600;
     margin-left: -3px;
 }
-.home .home-content .text-3{
+.home .home-content .text-3{/* animação */
     font-size: 40px;
     margin: 5px 0;
 }
 .home .home-content .text-3 span{
     color: crimson;
-    font-weight: 500;
+    font-weight: 200;
 }
 .home .home-content button{
-   
+   display: flex;   
     background: crimson;
     color: #fff;
     font-size: 25px;
@@ -818,3 +825,4 @@ footer span a:hover{
     font-weight: bold;
     color: var(--crimson);
 }
+
